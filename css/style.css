@@ -1,0 +1,248 @@
+
+/* YOUR CSS STYLES */
+
+/* headers */
+h1 {
+    text-align: center;
+    font-size:60px;
+    padding:40px;
+    background-color: #17a2b8;
+    color: white;
+    margin-bottom: 0px;
+    font-family: "Liberation Mono"
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    color: #1A237E;
+}
+
+
+#map_header{
+    font-size:40px;
+}
+
+/* main text */
+p {
+    font-size:20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* visualization areas */
+#map_area{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#selection_area{
+    text-align:center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+
+.legendThreshold {
+    font-size: 15px;
+    padding: 10px;
+}
+
+/*tool tip style */
+.d3-tip{
+    font-size: 15px;
+    text-align: center;
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+.d3-tip.hidden {
+    display: none;
+}
+
+
+/* hr styles
+inspired by https://css-tricks.com/examples/hrs/
+*/
+
+#water_hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #deebf7, #2171b5, #deebf7);
+}
+
+#sanitation_hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #f0f0f0, #252525, #f0f0f0);
+}
+
+#population_hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #fee391, #993404, #fee391);
+}
+
+/* map details text + headers */
+#details_list {
+    padding-top: 75px;
+    list-style: none;
+    font-size: 17px;
+    font-family: ;
+    line-height: 3;
+    padding-left:0;
+    text-align: center;
+    list-style-type: none;
+}
+
+#population_header {
+    color: #ec7014;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#water_header {
+    color: #2171b5;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#sanitation_header {
+    color: #525252;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    vertical-align: middle;
+}
+
+.details_header {
+    padding-top: 30px;
+}
+
+/* colored rows styling */
+
+.row_blue{
+    background-color: #17a2b8;
+    color: white;
+}
+
+.row_blue h2{
+   color: #1A237E;
+}
+
+.row_blue strong{
+    color: #1A237E;
+}
+
+.row_white strong{
+    color: #17a2b8;
+}
+
+/*bar chart axis styles */
+.axis text{
+    fill: white;
+    font-size: 15px;
+}
+
+.axis line {
+    stroke: white;
+}
+
+.axis path{
+    stroke: white;
+}
+
+#about_viz {
+    padding-top: 20px;
+}
+
+
+/* image overlay effect
+inspired by w3 schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade
+*/
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    margin:auto;
+
+}
+
+.overlay_white{
+    background-color: #ffffff;
+}
+
+.overlay_blue {
+    background-color: #17a2b8;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay_text {
+    text-align: center;
+    font-size: 30px;
+    opacity: 1;
+    padding-right: 50px;
+    padding-left: 25px;
+    vertical-align: middle;
+    margin:auto;
+    padding-top: 20%;
+
+}
+
+.overlay_white overlay_text{
+    color: #17a2b8;
+}
+
+.overlay_blue overlay_text{
+    color: white;
+}
+
+.overlay_text strong{
+    color: #1A237E;
+}
+
+.overlay_text:hover {
+    opacity: 1;
+}
+
+.img-responsive {
+    height: 100%;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.image_container {
+    padding:0px;
+}

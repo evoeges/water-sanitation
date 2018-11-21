@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 6</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!--
+
+		Water & Sanitation
+			- Information, Text, Pictures
+			- Choropleth
+
+	-->
+
+
+	<h1 class="main_header"> <i class="fas fa-tint"></i> &nbsp Water: A Universal Human Right &nbsp <i class="fas fa-tint"></i></h1>
+	<div class="container-fluid">
+
+		<div class=" row row1 row_white align-items-center">
+			<div class="col-md-6">
+				<p>
+					Clean, accessible water for all is an essential part of the world we want to live in. There is
+					sufficient fresh water on the planet to achieve this. But due to bad economics or poor
+					infrastructure, <strong> every year millions of people, most of them children, die from diseases
+					associated with inadequate water supply, sanitation and hygiene.</strong>  Water scarcity, poor water
+					quality and inadequate sanitation negatively impact food security, livelihood choices and
+					educational opportunities for poor families across the world. Drought afflicts some of the
+					world’s poorest countries, worsening hunger and malnutrition.
+				</p>
+
+			</div>
+
+			<div class="col-md-6 image_container">
+				<img src="img/wash.jpg" alt="a young girl pouring water on to her hands" class="image">
+				<div class="overlay overlay_white">
+					<div class="overlay_text"> Water scarcity affects more than <strong> 40% of the global population </strong>  and is projected to rise. </div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row row2 row_blue align-items-center">
+			<div class="col-md-6 image_container">
+				<img src="img/water1.jpg" alt="a young girl filling a bucket of water from a tap"  class="image">
+				<div class="overlay overlay_blue">
+					<div class="overlay_text"><strong>2.4 billion people</strong> lack access to basic sanitation services, such as toilets or latrines.</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+				<p>
+					Water is essential for life, health and human dignity. In extreme emergency situations, <strong> there
+					may not be sufficient water available to meet basic needs and in these cases, supplying a
+					minimum level of safe drinking-water for survival is of critical importance. </strong>
+					People use water for a wide variety of activities. Some of these are more important than
+					others. Having a few litres of water to drink each day, for example, is more important than
+					having water for personal hygiene or laundry, but people will still want and need to wash for
+					the prevention of skin diseases and meeting other physiological needs. Other uses of water
+					have health and other benefits but decrease in urgency.
+				</p>
+
+			</div>
+
+		</div>
+
+		<div class="row row3 row_white align-items-center">
+			<div class="col-12">
+				<h2 id="map_header"> The Situation in Africa</h2>
+			</div>
+		</div>
+
+		<div class="row row4 row_white align-items-center">
+
+			<div class="col-md-8">
+				<div class="form-group" id="selection_area">
+					<select class="form=control" id="selected_value" onchange="updateChoropleth()">
+						<option value="populationValue">2015 Population</option>
+						<option value="waterValue">Improved Water 2015</option>
+						<option value="sanitationValue">Improved Sanitation 2015</option>
+					</select>
+					<div id="map_area"></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<!-- <div id="details_area"></div> -->
+				<ul id="info_details"></ul>
+			</div>
+		</div>
+
+		<div class="row row5 row_blue align-items-center">
+
+			<div class="col-md-6">
+				<h2> What would it cost if we don’t correct the problem? </h2>
+				<p>
+					The costs are huge – both for people and for the economy. Worldwide, more than <strong> 2 million
+					people die every year from diarrhoeal diseases. </strong> Poor hygiene and unsafe water are
+					responsible for nearly 90% of these deaths and mostly affect children. The economic impact
+					of not investing in water and sanitation costs an enormous <strong> 4.3% of sub-Saharan African GDP. </strong>
+					The World Bank estimates that 6.4% of India’s GDP is lost due to adverse economic impacts
+					and costs of inadequate sanitation. Without better infrastructure and management, many
+					millions of people will continue to die every year and there will be further losses in
+					biodiversity and ecosystem resilience, undermining prosperity and efforts towards a more
+					sustainable future.
+				</p>
+			</div>
+
+			<div class="col-md-6 image_container">
+				<!-- Additional image from UNICEF WASH website https://www.unicef.org/wash/3942_4456.html-->
+				<img src="img/wash6.jpg" alt="a young boy filling yellow water buckets" class="image">
+				<div class="overlay overlay_blue">
+					<div class="overlay_text"> More than <strong> 80% of wastewater </strong> resulting from human activities is discharged into rivers or sea without any pollution removal. </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row6 row_white align-items-center">
+
+			<div class="col-md-6 image_container">
+				<!-- Additional image from UNICEF WASH website https://www.unicef.org/wash/3942_3952.html-->
+				<img src="img/wash3.jpg" alt="a young boy sitting on a pile of rubble" class="image">
+				<div class="overlay overlay_white">
+					<div class="overlay_text"> At least <strong> 1.8 billion people </strong> globally use a source of drinking water that is fecally contaminated. </div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+
+				<h2> What would it cost to correct the problem? </h2>
+				<p>
+					A study by the World Bank Group, UNICEF and the World Health Organization estimates that
+					extending basic water and sanitation services to the unserved would cost USD 28.4 billion
+					per year from 2015 to 2030, or <strong> 0.10% of the global product of the 140 countries </strong> included in
+					its study.
+				</p>
+			</div>
+
+		</div>
+
+		<div class="row row7 align-items-center row_blue">
+			<div class="col-md-6">
+				<h2>What Has UNICEF WASH done?</h2>
+				<p>
+				UNICEF’s water, sanitation and hygiene (WASH) team works in <strong> over 100 countries  </strong> worldwide
+				to improve water and sanitation services, as well as basic hygiene practices. Over the last 15
+				years, UNICEF has led a global effort to improve water, sanitation and hygiene conditions for
+				millions of people worldwide. In 2010, a full five years ahead of schedule, the target for
+				water within Millennium Development Goals was met. <strong> Today, 91% of the world’s population
+				has access to clean drinking water and 68% use improved sanitation  </strong> (a facility that separates
+				human waste from human contact). <br> <br>
+
+				However, development efforts made during the Millennium Development Goal era failed to
+				reach millions of children in poor and rural communities. As a result, massive inequalities
+				exist between those with access to clean water and basic toilets, and those without. In the
+				pursuit of the new Sustainable Development Goals and fulfilling the rights of children,
+				UNICEF works to reach the most vulnerable and disadvantaged children.
+				</p>
+			</div>
+
+			<div class="col-md-6 align-items-center">
+				<p>
+					The interactive visualization below shows direct UNICEF beneficiaries in 2014 and 2015 in millions of people.
+				</p>
+				<div class="form-group" id="selection_area">
+					<select class="form=control" id="wash_selected_value" onchange="updateBarChart()">
+						<option value="year2014">2014 Beneficiaries Count</option>
+						<option value="year2015">2015 Beneficiaries Count </option>
+					</select>
+				<div id="wash_chart_area"></div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row row8 row_white align-items-center">
+			<div class="col-md-6 image_container">
+				<img src="img/wash2.jpg" alt="a group of children holding their palms to the camera" class="image">
+			</div>
+			<div class="col-md-6">
+				<h2>What Can We Do?</h2>
+				<p>Civil society organizations should work to keep governments accountable, invest in water
+					research and development, and promote the inclusion of women, youth and indigenous
+					communities in water resources governance. <br><br>
+					Generating awareness of these roles and turning them into action will lead to win-win results
+					and increased sustainability and integrity for both human and ecological systems.</p>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/topojson.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3-tip.js"></script>
+	<script src="js/colorbrewer.js"></script>
+
+	<!-- Used Susie Lu's D3 Legend Library https://d3-legend.susielu.com/ -->
+	<script src="js/d3-legend.min.js"></script>
+
+	<!-- Choropleth and optional second visualization -->
+
+	<script src="js/vis-choropleth.js"></script>
+	<script src="js/vis-wash.js"></script>
+		<script src="js/main.js"></script>
+
+</body>
+</html>
